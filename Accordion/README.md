@@ -1,3 +1,2 @@
-# Accordion
 
 ![Accordion](./accordion.png)
