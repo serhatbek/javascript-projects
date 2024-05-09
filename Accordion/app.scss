@@ -82,14 +82,16 @@ body {
 
   &__body {
     overflow: hidden;
-    height: 0;
     background-color: #202b2f;
-    transition: all 0.2s ease-out;
+    max-height: 0px;
+    padding: 0 16px;
+    opacity: 0;
+    transition: 400ms all ease-out;
   }
 
   #{ $self }__item.active #{ $self }__body {
-    height: auto;
-    padding: 1.6rem;
-    line-height: 2rem;
+    opacity: 1;
+    max-height: 500px;
+    padding: 16px;
   }
 }
