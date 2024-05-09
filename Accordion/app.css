@@ -65,6 +65,13 @@ body {
   align-items: center;
   color: #141111;
   font-size: 32px;
+  transition: 400ms all ease-out;
+}
+.accordion .accordion__item.active .accordion__header {
+  background-color: #2971af;
+}
+.accordion .accordion__item.active .accordion__header .bx-chevron-down {
+  transform: rotate(180deg);
 }
 .accordion__body {
   overflow: hidden;
@@ -74,14 +81,8 @@ body {
   opacity: 0;
   transition: 400ms all ease-out;
 }
-.accordion .accordion__item.active .accordion__header {
-  background-color: #2971af;
-}
-.accordion .accordion__item.active .bx-chevron-down {
-  transform: rotate(180deg);
-}
 .accordion .accordion__item.active .accordion__body {
   opacity: 1;
   max-height: 500px;
   padding: 16px;
-}/*# sourceMappingURL=app.css.map */
+}

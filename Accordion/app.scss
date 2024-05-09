@@ -81,7 +81,16 @@ body {
       align-items: center;
       color: $black2;
       font-size: 32px;
+      transition: 400ms all ease-out;
     }
+  }
+
+  #{ $self }__item.active #{ $self }__header {
+    background-color: $blue;
+  }
+
+  #{ $self }__item.active #{ $self }__header .bx-chevron-down {
+    transform: rotate(180deg);
   }
 
   &__body {
@@ -91,14 +100,6 @@ body {
     padding: 0 16px;
     opacity: 0;
     transition: 400ms all ease-out;
-  }
-
-  #{ $self }__item.active #{ $self }__header {
-    background-color: $blue;
-  }
-
-  #{ $self }__item.active .bx-chevron-down {
-    transform: rotate(180deg);
   }
 
   #{ $self }__item.active #{ $self }__body {
