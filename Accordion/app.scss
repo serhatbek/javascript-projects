@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+// COLORS
+$black: #202b2f;
+$black2: #141111;
+$white: aliceblue;
+$grayish-blue: #003249;
+$blue: #2971af;
+
+// RESET
 *,
 *::before,
 *::after {
@@ -8,27 +16,31 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $black2;
+  color: $white;
+}
+
+// STYLES
 .container {
   max-width: 980px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
+  padding-top: 150px;
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #141111;
-  color: aliceblue;
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .accordion {
   $self: &;
   max-width: 700px;
   width: 100%;
+  margin: 0 auto;
 
   &__item {
     display: flex;
@@ -36,7 +48,7 @@ body {
     overflow: hidden;
 
     &:not(:last-child) {
-      border-bottom: 1px solid #141111;
+      border-bottom: 1px solid $black2;
     }
 
     &:first-child {
@@ -51,7 +63,7 @@ body {
   }
 
   &__header {
-    background-color: #003249;
+    background-color: $grayish-blue;
     padding: 1.2rem 1.6rem;
     display: flex;
     justify-content: space-between;
@@ -63,30 +75,30 @@ body {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background-color: aliceblue;
+      background-color: $white;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #141111;
+      color: $black2;
       font-size: 32px;
     }
   }
 
-  #{ $self }__item.active #{ $self }__header {
-    background-color: #2971af;
-  }
-
-  #{ $self }__item.active .bx-chevron-down {
-    transform: rotate(180deg);
-  }
-
   &__body {
     overflow: hidden;
-    background-color: #202b2f;
+    background-color: $black;
     max-height: 0px;
     padding: 0 16px;
     opacity: 0;
     transition: 400ms all ease-out;
+  }
+
+  #{ $self }__item.active #{ $self }__header {
+    background-color: $blue;
+  }
+
+  #{ $self }__item.active .bx-chevron-down {
+    transform: rotate(180deg);
   }
 
   #{ $self }__item.active #{ $self }__body {
