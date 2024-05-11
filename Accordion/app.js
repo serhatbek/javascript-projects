@@ -1,4 +1,4 @@
-const accordionItems = document.querySelectorAll('.accordion__item');
+const accordionItems = document.querySelectorAll('.js-accordion');
 
 if (accordionItems) {
   accordionItems.forEach((accordion) => {
@@ -9,12 +9,12 @@ if (accordionItems) {
 const toggleAccordion = (e) => {
   let target = e.currentTarget;
 
-  if (!target.classList.contains('active')) {
+  if (!target.classList.contains('accordion--expand')) {
     accordionItems.forEach((item) => {
-      item.classList.remove('active');
+      item.classList.remove('accordion--expand');
     });
-    target.classList.add('active');
+    target.classList.add('accordion--expand');
   } else {
-    target.classList.remove('active');
+    target.classList.remove('accordion--expand');
   }
 };
