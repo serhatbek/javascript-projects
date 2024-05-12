@@ -9,7 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #141111;
+  background-color: #1e1e1e;
   color: aliceblue;
 }
 
@@ -37,7 +37,7 @@ body {
   overflow: hidden;
 }
 .accordion:not(:last-child) {
-  border-bottom: 1px solid #141111;
+  border-bottom: 1px solid #1e1e1e;
 }
 .accordion:first-child {
   border-top-left-radius: 8px;
@@ -67,7 +67,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #141111;
+  color: #1e1e1e;
   font-size: 32px;
   transition: 400ms all ease-in-out;
 }
