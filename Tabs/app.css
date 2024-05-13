@@ -22,11 +22,17 @@ body {
 
 .btn {
   font-size: 12px;
+  font-weight: 600;
   padding: 10px;
   background: transparent;
   outline: transparent;
   border: transparent;
   color: #101927;
+}
+@media only screen and (max-width: 576px) {
+  .btn {
+    padding: 10px 8px;
+  }
 }
 .btn.active {
   color: #2955ac;
@@ -56,14 +62,34 @@ body {
 .tabs__content > div {
   width: 100%;
   display: none;
+  gap: 20px;
 }
-.tabs__content > div > h4 {
+.tabs__content > div > figure {
+  max-width: 400px;
+  width: 100%;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 992px) {
+  .tabs__content > div > figure {
+    margin: 0 auto;
+  }
+}
+.tabs__content > div > figure img {
+  width: 100%;
+  display: block;
+}
+.tabs__content > div > div > h4 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
-.tabs__content > div > p {
+.tabs__content > div > div > p {
   line-height: 1.8;
 }
 .tabs__content > div.active {
-  display: block;
+  display: flex;
+}
+@media only screen and (max-width: 978px) {
+  .tabs__content > div.active {
+    flex-direction: column;
+  }
 }

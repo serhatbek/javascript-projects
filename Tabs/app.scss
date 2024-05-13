@@ -34,11 +34,15 @@ body {
 
 .btn {
   font-size: 12px;
+  font-weight: 600;
   padding: 10px;
   background: transparent;
   outline: transparent;
   border: transparent;
   color: $text;
+  @media only screen and (max-width: 576px) {
+    padding: 10px 8px;
+  }
 
   &.active {
     color: $blue;
@@ -70,19 +74,41 @@ body {
     > div {
       width: 100%;
       display: none;
+      gap: 20px;
 
-      > h4 {
-        font-size: 24px;
-        margin-bottom: 10px;
+      > figure {
+        max-width: 400px;
+        width: 100%;
+        flex-shrink: 0;
+
+        @media only screen and (max-width: 992px) {
+          margin: 0 auto;
+        }
+
+        img {
+          width: 100%;
+          display: block;
+        }
       }
 
-      > p {
-        line-height: 1.8;
+      > div {
+        > h4 {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+
+        > p {
+          line-height: 1.8;
+        }
       }
     }
 
     > div.active {
-      display: block;
+      display: flex;
+
+      @media only screen and (max-width: 978px) {
+        flex-direction: column;
+      }
     }
   }
 }
