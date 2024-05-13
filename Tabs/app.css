@@ -17,11 +17,53 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  padding-top: 150px;
+  padding: 150px 16px 0 16px;
+}
+
+.btn {
+  font-size: 12px;
+  padding: 10px;
+  background: transparent;
+  outline: transparent;
+  border: transparent;
+  color: #101927;
+}
+.btn.active {
+  color: #2955ac;
+  position: relative;
+}
+.btn.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #2955ac;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 
 .tabs {
   background-color: #f7f7f7;
   border-radius: 8px;
   padding: 32px;
+}
+.tabs__pills {
+  border-bottom: 2px solid rgba(16, 25, 39, 0.2);
+}
+.tabs__content {
+  padding: 20px 0;
+}
+.tabs__content > div {
+  width: 100%;
+  display: none;
+}
+.tabs__content > div > h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.tabs__content > div > p {
+  line-height: 1.8;
+}
+.tabs__content > div.active {
+  display: block;
 }
