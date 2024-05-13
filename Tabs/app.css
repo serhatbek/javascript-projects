@@ -9,6 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(351deg, rgb(44, 161, 91) 19%, rgb(60, 168, 200) 100%);
 }
 
 .container {
@@ -17,4 +18,10 @@ body {
   height: 100vh;
   margin: 0 auto;
   padding-top: 150px;
+}
+
+.tabs {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 32px;
 }

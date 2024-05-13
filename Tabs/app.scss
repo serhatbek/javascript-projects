@@ -2,6 +2,9 @@
 
 // COLORS
 
+$bg-color: #1f1f1f;
+$white: #f7f7f7;
+
 // RESET
 *,
 *::before,
@@ -13,6 +16,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(
+    351deg,
+    rgba(44, 161, 91, 1) 19%,
+    rgba(60, 168, 200, 1) 100%
+  );
 }
 
 .container {
@@ -21,4 +29,10 @@ body {
   height: 100vh;
   margin: 0 auto;
   padding-top: 150px;
+}
+
+.tabs {
+  background-color: $white;
+  border-radius: 8px;
+  padding: 32px;
 }
