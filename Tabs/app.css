@@ -9,15 +9,17 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(351deg, rgb(44, 161, 91) 19%, rgb(60, 168, 200) 100%);
+  background: #3ca8c8;
 }
 
 .container {
   max-width: 980px;
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
-  padding: 150px 16px 0 16px;
+  padding: 60px 16px 30px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
@@ -28,6 +30,7 @@ body {
   outline: transparent;
   border: transparent;
   color: #101927;
+  transition: 300ms all ease-in-out;
 }
 @media only screen and (max-width: 576px) {
   .btn {
@@ -51,7 +54,7 @@ body {
 .tabs {
   background-color: #f7f7f7;
   border-radius: 8px;
-  padding: 32px;
+  padding: 32px 32px 10px 32px;
 }
 .tabs__pills {
   border-bottom: 2px solid rgba(16, 25, 39, 0.2);

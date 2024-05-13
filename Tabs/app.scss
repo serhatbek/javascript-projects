@@ -17,19 +17,18 @@ $blue: #2955ac;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(
-    351deg,
-    rgba(44, 161, 91, 1) 19%,
-    rgba(60, 168, 200, 1) 100%
-  );
+  background: #3ca8c8;
 }
 
+// STYLING
 .container {
   max-width: 980px;
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
-  padding: 150px 16px 0 16px;
+  padding: 60px 16px 30px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
@@ -40,6 +39,7 @@ body {
   outline: transparent;
   border: transparent;
   color: $text;
+  transition: 300ms all ease-in-out;
   @media only screen and (max-width: 576px) {
     padding: 10px 8px;
   }
@@ -63,7 +63,7 @@ body {
 .tabs {
   background-color: $white;
   border-radius: 8px;
-  padding: 32px;
+  padding: 32px 32px 10px 32px;
 
   &__pills {
     border-bottom: 2px solid rgba($color: $text, $alpha: 0.2);
@@ -74,6 +74,7 @@ body {
     > div {
       width: 100%;
       display: none;
+      //   display: flex;
       gap: 20px;
 
       > figure {
