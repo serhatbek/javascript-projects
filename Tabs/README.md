@@ -179,7 +179,7 @@ Now, we can style our tabs using scss.
 
 ### Adding JavaScript Functionality
 
-Lastly, we'll add JavaScript code to handle tab navigation and toggle the **active** state class of tab buttons and content panels.
+Lastly, we'll add JavaScript code to handle tab navigation and toggle the **active** state class of tab buttons and content panels. By using the data-id attribute, we establish a relationship between tab buttons and content panels, allowing us to easily toggle their visibility and active states based on user interaction.
 
 ```javascript
 const tabButtons = document.querySelectorAll('.tabs__pills .btn');
