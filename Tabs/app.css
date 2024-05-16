@@ -61,40 +61,40 @@ body {
   width: fit-content;
   border-bottom: 2px solid rgba(16, 25, 39, 0.2);
 }
-.tabs__content {
+.tabs__panels {
   padding: 20px 0;
 }
-.tabs__content > div {
+.tabs__panels > div {
   width: 100%;
   display: none;
   gap: 20px;
 }
-.tabs__content > div > figure {
+.tabs__panels > div > figure {
   max-width: 400px;
   width: 100%;
   flex-shrink: 0;
 }
 @media only screen and (max-width: 992px) {
-  .tabs__content > div > figure {
+  .tabs__panels > div > figure {
     margin: 0 auto;
   }
 }
-.tabs__content > div > figure img {
+.tabs__panels > div > figure img {
   width: 100%;
   display: block;
 }
-.tabs__content > div > div > h4 {
+.tabs__panels > div > div > h4 {
   font-size: 24px;
   margin: 10px 0;
 }
-.tabs__content > div > div > p {
+.tabs__panels > div > div > p {
   line-height: 1.8;
 }
-.tabs__content > div.active {
+.tabs__panels > div.active {
   display: flex;
 }
 @media only screen and (max-width: 978px) {
-  .tabs__content > div.active {
+  .tabs__panels > div.active {
     flex-direction: column;
   }
 }

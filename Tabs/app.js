@@ -1,5 +1,5 @@
 const tabButtons = document.querySelectorAll('.tabs__pills .btn');
-const tabContents = document.querySelectorAll('.tabs__content > div');
+const tabContents = document.querySelectorAll('.tabs__panels > div');
 
 if (tabButtons && tabContents) {
   tabButtons.forEach((tabBtn) => {
