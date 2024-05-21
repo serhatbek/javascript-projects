@@ -4,8 +4,8 @@
 // $black: #202b2f;
 $black2: #1e1e1e;
 $white: aliceblue;
-// $grayish-blue: #003249;
-// $blue: #2971af;
+$grayish-blue: #003249;
+$blue: #2971af;
 
 // RESET
 *,
@@ -43,5 +43,15 @@ body {
     background: transparent;
     border: 0;
     cursor: pointer;
+
+    &--primary {
+      background-color: $blue;
+      border-radius: 4px;
+    }
+  }
+
+  .tooltip {
+    border-radius: 4px;
+    background-color: $grayish-blue;
   }
 }
