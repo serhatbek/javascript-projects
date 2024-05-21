@@ -32,12 +32,29 @@ body {
   background: transparent;
   border: 0;
   cursor: pointer;
+  border-radius: 4px;
+  margin: 0 10px;
+  position: relative;
 }
 .container .trigger--primary {
-  background-color: #2971af;
-  border-radius: 4px;
+  background-color: #4983cf;
 }
-.container .tooltip {
+.container .trigger--secondary {
+  background-color: #be5064;
+}
+.container [role=tooltip] {
+  width: auto;
+  height: auto;
+  min-height: 25px;
+  padding: 8px;
   border-radius: 4px;
   background-color: #003249;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -135%);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.container [role=tooltip].active {
+  opacity: 1;
 }
