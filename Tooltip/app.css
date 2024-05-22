@@ -43,18 +43,33 @@ body {
   background-color: #be5064;
 }
 .container [role=tooltip] {
-  width: auto;
+  width: calc(100% + 40px);
   height: auto;
-  min-height: 25px;
   padding: 8px;
+  line-height: 1.5;
   border-radius: 4px;
   background-color: #003249;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -135%);
+  bottom: calc(100% + 15px);
+  transform: translateX(-50%);
   opacity: 0;
+  visibility: hidden;
   transition: all 300ms ease-in-out;
 }
 .container [role=tooltip].active {
   opacity: 1;
+  visibility: visible;
+}
+.container [role=tooltip]::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #003249;
 }

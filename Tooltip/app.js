@@ -1,14 +1,12 @@
 const triggers = document.querySelectorAll('.trigger');
 
 const openTooltip = (e) => {
-  const trigger = e.target;
-  const tooltip = trigger.querySelector('[role=tooltip]');
+  const tooltip = e.target.querySelector('[role=tooltip]');
   tooltip.classList.add('active');
 };
 
 const closeTooltip = (e) => {
-  const trigger = e.target;
-  const tooltip = trigger.querySelector('[role=tooltip]');
+  const tooltip = e.target.querySelector('[role=tooltip]');
   tooltip.classList.remove('active');
 };
 
@@ -23,6 +21,6 @@ if (triggers) {
     trigger.appendChild(tooltip);
 
     trigger.addEventListener('mouseenter', openTooltip);
-    // trigger.addEventListener('mouseleave', closeTooltip);
+    trigger.addEventListener('mouseleave', closeTooltip);
   });
 }
