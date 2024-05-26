@@ -19,7 +19,7 @@ $pink: #be5064;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: $black2;
+  background-color: $grayish-blue;
   color: $white;
 }
 
@@ -58,6 +58,18 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  z-index: -22;
+  transition: all 300ms ease-in-out;
+
+  &--opened {
+    opacity: 1;
+    user-select: auto;
+    pointer-events: all;
+    z-index: 1;
+  }
 
   &__overlay {
     position: absolute;
