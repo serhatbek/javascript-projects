@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.querySelector('.js-modal');
-  const showModalBtn = document.querySelector('.js-show-modal');
-  const closeModalBtns = document.querySelectorAll('.js-close-modal');
+  const modal = document.querySelector('.js-modal'),
+    openModalBtn = document.querySelector('.js-show-modal'),
+    closeModalBtns = document.querySelectorAll('.js-close-modal'),
+    body = document.querySelector('body');
 
   const closeModal = () => {
     modal.classList.remove('modal--opened');
+    body.classList.remove('overflowHidden');
   };
 
-  const showModal = () => {
+  const openModal = () => {
     modal.classList.add('modal--opened');
+    body.classList.add('overflowHidden');
   };
 
   if (modal) {
-    showModalBtn.addEventListener('click', showModal);
+    openModalBtn.addEventListener('click', openModal);
     closeModalBtns.forEach((btn) => btn.addEventListener('click', closeModal));
   }
 
