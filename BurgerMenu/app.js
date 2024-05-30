@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const burgerBtn = document.querySelector('.hamburger-menu');
+  const burgerBtn = document.querySelector('.js-menu-toggle-btn');
 
   const toggleMobileMenu = () => {
     burgerBtn.classList.toggle('hamburger-menu--active');
