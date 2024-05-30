@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #003249;
+  color: aliceblue;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger-menu__line {
+  height: 3px;
+  background-color: aliceblue;
+  width: 100%;
+  display: block;
+  transition: all 300ms ease-in-out;
+}
+.hamburger-menu:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: aliceblue;
+  top: 5px;
+  left: 0;
+  transition: all 300ms ease-in-out;
+}
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: aliceblue;
+  left: 0;
+  bottom: 5px;
+  transition: all 300ms ease-in-out;
+}
+.hamburger-menu--active:after {
+  transform: rotate(-140deg);
+  bottom: 13px;
+}
+.hamburger-menu--active:before {
+  transform: rotate(140deg);
+  top: 15px;
+}
+.hamburger-menu--active .hamburger-menu__line {
+  opacity: 0;
+  width: 0;
+}
