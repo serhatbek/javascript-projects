@@ -207,4 +207,4 @@ if (tabButtons && tabContents) {
 
 We've just created a simple tabs component using vanilla JavaScript. You can customize it for your project's needs.
 
-Thank you for reading. If you find the article useful, please do not forget to give a star so that others can access it. Happy Coding! 🙃
+Thank you for reading. If you find the article useful, please do not forget to give a star so that others can access it too. Happy Coding! 🙃
