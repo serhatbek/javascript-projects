@@ -200,11 +200,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     modal.classList.remove('modal--opened');
     body.classList.remove('overflowHidden');
+    document.removeEventListener('keydown', handleEscClose);
   };
 
   const openModal = () => {
     modal.classList.add('modal--opened');
     body.classList.add('overflowHidden');
+    document.addEventListener('keydown', handleEscClose);
+  };
+
+  const handleEscClose = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
   };
 
   if (modal) {
